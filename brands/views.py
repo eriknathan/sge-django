@@ -1,14 +1,17 @@
-from django.db import models
+from django.views.generic import ListView
+from . import models
 
 
-class Brand(models.Model):
-    name = models.CharField(max_length=500)
-    description = models.TextField(null=True, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    update_at = models.DateTimeField(auto_now=True)
+class BrandListView(ListView):
+    model = models.Brand
+    template_name = 'brand_list.html'
+    context_object_name = 'brands'
 
-    class Meta:
-        ordering = ['name']
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        name = self.request.GET.get('name')
 
-    def __str__(self):
-        return self.name
+        if name:
+            queryset = queryset.filter(name__icontains=name)
+
+        return queryset
