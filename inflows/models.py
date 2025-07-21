@@ -8,7 +8,7 @@ class Inflow(models.Model):
         Supplier,
         on_delete=models.PROTECT,
         related_name='inflows'
-    ),
+    )
     product = models.ForeignKey(
         Product,
         on_delete=models.PROTECT,
