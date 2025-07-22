@@ -2,6 +2,8 @@ from django.utils.formats import number_format
 from django.utils import timezone
 from django.db.models import Sum, F
 from products.models import Product
+from brands.models import Brand
+from categories.models import Category
 from outflows.models import Outflow
 
 
@@ -78,3 +80,15 @@ def get_daily_sales_quantity_data():
         dates=dates,
         values=quantities
     )
+
+
+def get_graphic_product_category_metric():
+    categories = Category.objects.all()
+    return {category.name: Product.objects.filter(category=category).count()
+            for category in categories}
+
+
+def get_graphic_product_brand_metric():
+    brands = Brand.objects.all()
+    return {brand.name: Product.objects.filter(brand=brand).count()
+            for brand in brands}
