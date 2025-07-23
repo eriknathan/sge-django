@@ -10,9 +10,6 @@ migrate:
 superuser:
 	@python3 manage.py createsuperuser
 
-flake:
-	@flake8
-
 version:
 	@django-admin --version
 
