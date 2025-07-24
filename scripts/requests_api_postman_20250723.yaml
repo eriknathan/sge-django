@@ -1,0 +1,826 @@
+type: collection.insomnia.rest/5.0
+name: SGE - Sistema Gestão de Estoque
+meta:
+  id: wrk_c96dbdd7f8634029abcaa8349c3bd776
+  created: 1753272701483
+  modified: 1753280181783
+  description: ""
+collection:
+  - name: Brands
+    meta:
+      id: fld_f29f3d46140e4704b16a089cdb5fd509
+      created: 1753276194822
+      modified: 1753276194822
+      sortKey: -1753276194822
+      description: ""
+    children:
+      - url: http://localhost:8000/api/v1/brands/
+        name: api/v1/brands/
+        meta:
+          id: req_009a6cc8bbed4d4eb6a2f2b8175f9c09
+          created: 1753272706551
+          modified: 1753288675485
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216440
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzMjkwNDY4LCJpYXQiOjE3NTMyODg2NjgsImp0aSI6ImU1MGJhYzkzOTdjNjRjYzA5MDQ4MzBhOTE1YTEyNjQ3IiwidXNlcl9pZCI6IjUifQ.J_ey-Ip0SO8RW64nRdYlaxmLG4IqLgz4n5xp7U7AOiE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/brands/
+        name: api/v1/brands/
+        meta:
+          id: req_d269fa3c6ac142668bf2558ef0f65f9a
+          created: 1753273165966
+          modified: 1753276217901
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216240
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "LG",
+            	"description": "Já foi uma boa marca!"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/brands/1
+        name: api/v1/brands/id
+        meta:
+          id: req_b1b17ae04d1a4ea4b4defdb507bbf9fb
+          created: 1753273565321
+          modified: 1753276216236
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216140
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/brands/1/
+        name: api/v1/brands/id
+        meta:
+          id: req_e14e8cb78c49451e8c73c61613e96545
+          created: 1753273590491
+          modified: 1753276232905
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216190
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Logitech",
+            	"description": "Melhor marca de periféricos!"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/brands/3/
+        name: api/v1/brands/id
+        meta:
+          id: req_32cdff312bdb4af6b803c2cd29b6158a
+          created: 1753273676716
+          modified: 1753276223318
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216340
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Categories
+    meta:
+      id: fld_1cc3c0bb38e74feeb85c3314103b92f8
+      created: 1753276244313
+      modified: 1753276244313
+      sortKey: -1752627726767.5
+      description: ""
+    children:
+      - url: http://localhost:8000/api/v1/categories/
+        name: api/v1/categories/
+        meta:
+          id: req_c890fe17191c4bb1a4fe0aa3ba2c925a
+          created: 1753276244314
+          modified: 1753276260693
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216440
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/categories/
+        name: api/v1/categories/
+        meta:
+          id: req_df7edb0dc2a24ef1b5250ad4b8ae8325
+          created: 1753276244315
+          modified: 1753276726747
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216390
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "GPU"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/categories/5/
+        name: api/v1/categories/id
+        meta:
+          id: req_c3f08fa38bd64a619fc9cc7d7a16618a
+          created: 1753276244316
+          modified: 1753276360703
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216190
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Monitores 2",
+            	"description": "Melhores Monitores para computadores"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/categories/5
+        name: api/v1/categories/id
+        meta:
+          id: req_fa34b5d575214f15ba13e0d7fd535684
+          created: 1753276244316
+          modified: 1753276367469
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216140
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/categories/5/
+        name: api/v1/categories/id
+        meta:
+          id: req_5e2ce41950324b479a3cb6a1d289d74e
+          created: 1753276244317
+          modified: 1753276344684
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216340
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Inflows
+    meta:
+      id: fld_35daeb8302b44e68b4395120a5c957d3
+      created: 1753277846821
+      modified: 1753277846821
+      sortKey: -1752303492740.25
+      description: ""
+    children:
+      - url: http://localhost:8000/api/v1/inflows/
+        name: api/v1/inflows/
+        meta:
+          id: req_50f7de1ed6d14c57bab1b0d7ab6f6d83
+          created: 1753277846822
+          modified: 1753277872055
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216440
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/categories/
+        name: api/v1/inflows/
+        meta:
+          id: req_6eb4cd2903604ccebc9a0b9aa9a5552b
+          created: 1753277846823
+          modified: 1753278229749
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216040
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "GPU"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/inflows/5
+        name: api/v1/inflows/id
+        meta:
+          id: req_b6f2eb3046de4375abfd181ded0aef9e
+          created: 1753277846825
+          modified: 1753277878668
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216140
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Outflows
+    meta:
+      id: fld_7f7d1bdc13fd4574afc881a06ccd4c08
+      created: 1753278238428
+      modified: 1753280157661
+      sortKey: -1752262963486.8438
+      description: ""
+    children:
+      - url: http://localhost:8000/api/v1/outflows/
+        name: api/v1/outflows/
+        meta:
+          id: req_76b616d1c1b14784bcf65de631e1db69
+          created: 1753278238434
+          modified: 1753278255180
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216440
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/outflows/5
+        name: api/v1/outflows/id
+        meta:
+          id: req_696d5c34e9b34ff5b4e4b99bfcea4cd8
+          created: 1753278238435
+          modified: 1753278253011
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216140
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/outflows/
+        name: api/v1/outflows/
+        meta:
+          id: req_c8f68367f8cf42ec9b3998edfbd79e54
+          created: 1753278238435
+          modified: 1753278311278
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216040
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"quantity": 1,
+            	"description": "",
+            	"product": 3
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Products
+    meta:
+      id: fld_5d150b756a3c429fb05ad9bcc628cea8
+      created: 1753278575708
+      modified: 1753279238838
+      sortKey: -1752465609753.875
+      description: ""
+    children:
+      - url: http://localhost:8000/api/v1/products/
+        name: api/v1/products/
+        meta:
+          id: req_f34ce1cfc1514265a4990b5aaa95ef38
+          created: 1753278575709
+          modified: 1753288690335
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216440
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzMjkwNDY4LCJpYXQiOjE3NTMyODg2NjgsImp0aSI6ImU1MGJhYzkzOTdjNjRjYzA5MDQ4MzBhOTE1YTEyNjQ3IiwidXNlcl9pZCI6IjUifQ.J_ey-Ip0SO8RW64nRdYlaxmLG4IqLgz4n5xp7U7AOiE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/products/
+        name: api/v1/products/
+        meta:
+          id: req_2f0518aa2d47441a8c10c608e1d480d0
+          created: 1753278575710
+          modified: 1753288732861
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216390
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"title": "Mouse MX Anywhere 3s",
+            	"description": "Mouse bom demais",
+            	"serie_number": "656544840",
+            	"cost_price": "259.00",
+            	"selling_price": "389.00",
+            	"category": 2,
+            	"brand": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzMjkwNDY4LCJpYXQiOjE3NTMyODg2NjgsImp0aSI6ImU1MGJhYzkzOTdjNjRjYzA5MDQ4MzBhOTE1YTEyNjQ3IiwidXNlcl9pZCI6IjUifQ.J_ey-Ip0SO8RW64nRdYlaxmLG4IqLgz4n5xp7U7AOiE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/products/2/
+        name: api/v1/products/id
+        meta:
+          id: req_012065f7bbe24486977a16cf877d02e7
+          created: 1753278575711
+          modified: 1753278613200
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216140
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/products/5/
+        name: api/v1/products/id
+        meta:
+          id: req_bd3aa2aa07dd41258fc0245307f08bb3
+          created: 1753278575711
+          modified: 1753288806169
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216190
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Monitores 2",
+            	"description": "Melhores Monitores para computadores"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzMjkwNTk2LCJpYXQiOjE3NTMyODg3OTYsImp0aSI6IjE3YzZlN2M5MDc5YzRkZDJhOTYwMTA4ZDUyOTI0ZGNiIiwidXNlcl9pZCI6IjUifQ.18VnM5D72JsrMESjOydAE8hHfUh_efQ-umlpmfMqdKI
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/products/4/
+        name: api/v1/products/id
+        meta:
+          id: req_f806679109e04a15ba294b47f01147ab
+          created: 1753278575712
+          modified: 1753288818065
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216340
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzMjkwNTk2LCJpYXQiOjE3NTMyODg3OTYsImp0aSI6IjE3YzZlN2M5MDc5YzRkZDJhOTYwMTA4ZDUyOTI0ZGNiIiwidXNlcl9pZCI6IjUifQ.18VnM5D72JsrMESjOydAE8hHfUh_efQ-umlpmfMqdKI
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Suppliers
+    meta:
+      id: fld_1fa37b5f4d644834a9ac02264fbbf1a1
+      created: 1753279244529
+      modified: 1753280154970
+      sortKey: -1752222434233.4375
+      description: ""
+    children:
+      - url: http://localhost:8000/api/v1/suppliers/
+        name: api/v1/suppliers/
+        meta:
+          id: req_beace079de7044bc960d3a1129bd5e69
+          created: 1753279244530
+          modified: 1753279490747
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216440
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/suppliers/
+        name: api/v1/suppliers/
+        meta:
+          id: req_bb8cef568d4c47e0a272a45da71071e2
+          created: 1753279244531
+          modified: 1753279510748
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216390
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"title": "Mouse MX Anywhere 3",
+            	"description": "Mouse bom",
+            	"serie_number": "1596344796",
+            	"cost_price": "239.00",
+            	"selling_price": "369.00",
+            	"quantity": 50,
+            	"category": 2,
+            	"brand": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/suppliers/2/
+        name: api/v1/suppliers/id
+        meta:
+          id: req_ef4e63dd51234c1691a0fdb8da5187d4
+          created: 1753279244531
+          modified: 1753279501250
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216140
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/suppliers/5/
+        name: api/v1/suppliers/id
+        meta:
+          id: req_36020d0cc6fb452bae7a96abcd3ff799
+          created: 1753279244532
+          modified: 1753279505451
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216190
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Monitores 2",
+            	"description": "Melhores Monitores para computadores"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/suppliers/5/
+        name: api/v1/suppliers/id
+        meta:
+          id: req_37bc31b0f13f4b07b7a068221f2b8ab1
+          created: 1753279244532
+          modified: 1753279508277
+          isPrivate: false
+          description: ""
+          sortKey: -1753276216340
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Authentication
+    meta:
+      id: fld_5666e3b4afdf4cdca48849d576a267c3
+      created: 1753282109461
+      modified: 1753299446226
+      sortKey: -1753282109461
+      description: ""
+    children:
+      - url: http://localhost:8000/api/v1/authentication/token/
+        name: api/v1/authentication/token/
+        meta:
+          id: req_3e40266b6a874c1c804c47e565ed2054
+          created: 1753282111486
+          modified: 1753288667376
+          isPrivate: false
+          description: ""
+          sortKey: -1753282111486
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"username": "teste",
+            	"password": "erik12345"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/authentication/token/refresh/
+        name: api/v1/authentication/token/refresh/
+        meta:
+          id: req_8c8369af21d641d48fdd03e194de58e3
+          created: 1753282248244
+          modified: 1753282448727
+          isPrivate: false
+          description: ""
+          sortKey: -1753279163963
+        method: POST
+        body:
+          mimeType: application/json
+          text: >
+            {
+            	"refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1MzQ1NTIzNCwiaWF0IjoxNzUzMjgyNDM0LCJqdGkiOiIzZTljMDI2NTNiYWY0NjYxOWMzNTgxMmY4NTE2N2EyZCIsInVzZXJfaWQiOiIxIn0.qIQBFOAdWy7C_ObVaO3so1k_qox3lmxnWX6hN0hJGHM"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/authentication/token/verify/
+        name: api/v1/authentication/token/verify/
+        meta:
+          id: req_9412ec322b674abe85629957bcca9df1
+          created: 1753282295203
+          modified: 1753282465059
+          isPrivate: false
+          description: ""
+          sortKey: -1753277690201.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: >
+            {
+            	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzMjg0MjUzLCJpYXQiOjE3NTMyODI0NTMsImp0aSI6ImIxOGZlOGMxMjI5ZDRlZDRiMzJiZDNhN2UxMWM0MDE4IiwidXNlcl9pZCI6IjEifQ._pPoBhIHtXucH7rLPhs_KkG1HkiBdvDVtsm_wKQVHVE"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_31c684d24e293bdffa6254d129dcb9c1994be290
+    created: 1753272701498
+    modified: 1753272701498
+environments:
+  name: Base Environment
+  meta:
+    id: env_31c684d24e293bdffa6254d129dcb9c1994be290
+    created: 1753272701497
+    modified: 1753272701497
+    isPrivate: false
