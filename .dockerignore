@@ -1,0 +1,9 @@
+venv
+.flake8
+README.md
+db.sqlite3
+.git
+.gitignore
+__pychace__
+Makefile
+scripts/
